@@ -5,16 +5,16 @@
 -- Disable the concealing in some file formats
 -- The default conceallevel is 3 in LazyVim
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "json", "jsonc" },
-  callback = function()
-    vim.opt.conceallevel = 0
-  end,
+    pattern = { "json", "jsonc" },
+    callback = function()
+        vim.opt.conceallevel = 0
+    end,
 })
 
 -- Disable autoformat for lua files
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "cpp" },
-  callback = function()
-    vim.b.autoformat = false
-  end,
+    pattern = { "cpp" },
+    callback = function()
+        vim.b.autoformat = false
+    end,
 })
