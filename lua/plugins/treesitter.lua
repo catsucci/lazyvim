@@ -1,0 +1,26 @@
+return {
+  "nvim-treesitter/nvim-treesitter",
+  opts = function(_, opts)
+    -- add tsx and treesitter
+    vim.list_extend(opts.ensure_installed, {
+      "tsx",
+      "typescript",
+      "astro",
+      "cmake",
+      "cpp",
+      "css",
+      "fish",
+      "bash",
+      "gitignore",
+      "go",
+      "graphql",
+      "http",
+      "java",
+      "php",
+      "rust",
+      "scss",
+      "sql",
+      "svelte",
+    })
+  end,
+}
