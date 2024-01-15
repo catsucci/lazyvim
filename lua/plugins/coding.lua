@@ -22,6 +22,7 @@ return {
                 function()
                     require("refactoring").select_refactor()
                 end,
+                desc = "refactoring",
                 mode = "v",
                 noremap = true,
                 silent = true,
@@ -62,8 +63,11 @@ return {
                 desc = "Got to the down pane",
             },
 
-            { "<C-k>", "<cmd>TmuxNavigateUp<cr>", desc = "Got to the up pane" },
-
+            {
+                "<C-k>",
+                "<cmd>TmuxNavigateUp<cr>",
+                desc = "Got to the up pane",
+            },
             {
                 "<C-l>",
                 "<cmd>TmuxNavigateRight<cr>",
