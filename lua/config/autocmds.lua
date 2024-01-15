@@ -13,7 +13,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- Disable autoformat for lua files
 vim.api.nvim_create_autocmd({ "FileType" }, {
-    pattern = { "cpp" },
+    pattern = { "cpp", "c", "py", "js", "html", "css" },
     callback = function()
         vim.b.autoformat = false
     end,
