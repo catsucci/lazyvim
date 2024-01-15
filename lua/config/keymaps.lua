@@ -47,6 +47,14 @@ keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 -- This is going to get me cancelled
 keymap.set("i", "<C-c>", "<Esc>")
 
+-- Undotree
+keymap.set(
+    "n",
+    "<leader>pu",
+    vim.cmd.UndotreeToggle,
+    { desc = "Toggle Undotree>", remap = true }
+)
+
 -- Harpoon
 keymap.set("n", "<leader>ha", require("harpoon.mark").add_file)
 keymap.set("n", "<leader>hh", require("harpoon.ui").toggle_quick_menu)
@@ -78,8 +86,9 @@ keymap.set("n", "<leader>h9", function()
     require("harpoon.ui").nav_file(9)
 end)
 
--- open URL under cursor
--- keymap.set("n", "gx", ":!firefox <c-r><c-a><CR>")
-
 -- ThePrimeagen replace
--- keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+keymap.set(
+    "n",
+    "<leader>pr",
+    [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
+)

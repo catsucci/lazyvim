@@ -3,6 +3,9 @@ return {
     -- The greatest git plugin
     "tpope/vim-fugitive",
 
+    -- Undotree to not lose work
+    "mbbill/undotree",
+
     -- Incremental rename
     {
         "smjonas/inc-rename.nvim",
