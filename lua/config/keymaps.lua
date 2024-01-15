@@ -7,7 +7,7 @@ local opts = { noremap = true, silent = true }
 
 keymap.set(
     "n",
-    "<leader>pf",
+    "<leader>pv",
     vim.cmd.Ex,
     { desc = "Vim's Explorer", remap = true }
 )
@@ -163,6 +163,6 @@ keymap.set(
 keymap.set(
     "n",
     "<C-f>",
-    "<cmd>silent !tmux neww tmux-sessionizer<CR>",
+    "<cmd>silent ! tmux neww ~/.scripts/tmux.sessionizer.sh<CR>",
     { desc = "Tmux sessionizer", remap = true }
 )
