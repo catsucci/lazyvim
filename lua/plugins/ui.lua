@@ -38,4 +38,15 @@ return {
             },
         },
     },
+
+    -- Giving harpoon its groupe name in the keymap
+    {
+        "folke/which-key.nvim",
+        opts = {
+            defaults = {
+                ["<leader>h"] = { name = "+harpoon" },
+                ["<leader>p"] = { name = "+prime" },
+            },
+        },
+    },
 }
