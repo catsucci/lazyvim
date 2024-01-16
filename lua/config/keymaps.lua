@@ -12,24 +12,15 @@ keymap.set(
     { desc = "Vim's Explorer", remap = true }
 )
 
-keymap.set(
-    "n",
-    "x",
-    '"_x',
-    { desc = "Delete into the void register", remap = true }
-) -- send the char to the void reg
+-- send the char to the void reg
+keymap.set("n", "x", '"_x')
 
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>", { desc = "Increment", remap = true })
 keymap.set("n", "-", "<C-x>", { desc = "Decrement", remap = true })
 
 -- Delete a word backwards
-keymap.set(
-    "n",
-    "dw",
-    'vb"_d',
-    { desc = "Delete a word backwards", remap = true }
-)
+keymap.set("n", "dw", 'vb"_d')
 
 -- New tab
 keymap.set("n", "te", ":tabedit", opts)
@@ -37,35 +28,15 @@ keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 
 -- Moving elements around
-keymap.set(
-    "v",
-    "J",
-    ":m '>+1<CR>gv=gv",
-    { desc = "Move elements up", remap = true }
-)
-keymap.set(
-    "v",
-    "K",
-    ":m '<-2<CR>gv=gv",
-    { desc = "Move elements down", remap = true }
-)
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Better jumping
-keymap.set("n", "J", "mzJ`z", { desc = "Append the line below", remap = true })
-keymap.set(
-    "n",
-    "<C-d>",
-    "<C-d>zz",
-    { desc = "Jump half page Down", remap = true }
-)
-keymap.set(
-    "n",
-    "<C-u>",
-    "<C-u>zz",
-    { desc = "Jump half page Up", remap = true }
-)
-keymap.set("n", "n", "nzzzv", { desc = "Next search term", remap = true })
-keymap.set("n", "N", "Nzzzv", { desc = "Previous search term", remap = true })
+keymap.set("n", "J", "mzJ`z")
+keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")
+keymap.set("n", "n", "nzzzv")
+keymap.set("n", "N", "Nzzzv")
 
 -- Jumplist
 keymap.set("n", "<C-m>", "<C-i>", opts)
@@ -163,6 +134,5 @@ keymap.set(
 keymap.set(
     "n",
     "<C-f>",
-    "<cmd>silent ! tmux neww ~/.scripts/tmux.sessionizer.sh<CR>",
-    { desc = "Tmux sessionizer", remap = true }
+    "<cmd>silent ! tmux neww ~/.scripts/tmux.sessionizer.sh<CR>"
 )
