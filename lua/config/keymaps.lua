@@ -15,7 +15,7 @@ keymap.set(
 -- send the char to the void reg
 keymap.set("n", "x", '"_x')
 
--- Increment/decrement
+-- Increment/Decrement
 keymap.set("n", "+", "<C-a>", { desc = "Increment", remap = true })
 keymap.set("n", "-", "<C-x>", { desc = "Decrement", remap = true })
 
@@ -31,15 +31,23 @@ keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- Better jumping
+-- Center buffer while navigating
 keymap.set("n", "J", "mzJ`z")
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
+keymap.set("n", "{", "{zz")
+keymap.set("n", "}", "}zz")
+keymap.set("n", "G", "Gzz")
+keymap.set("n", "gg", "ggzz")
+keymap.set("n", "%", "%zz")
+keymap.set("n", "*", "*zz")
+keymap.set("n", "#", "#zz")
 
 -- Jumplist
-keymap.set("n", "<C-m>", "<C-i>", opts)
+keymap.set("n", "<C-m>", "<C-i>zz", opts)
+keymap.set("n", "<C-o>", "<C-o>zz", opts)
 
 -- greatest remap ever
 keymap.set(
