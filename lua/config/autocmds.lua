@@ -13,7 +13,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- Disable autoformat for some file types
 vim.api.nvim_create_autocmd({ "FileType" }, {
-    pattern = { "cpp", "c", "py", "js", "html", "css" },
+    pattern = { "cpp", "c", "py", "javascript", "html", "css" },
     callback = function()
         vim.b.autoformat = false
     end,
