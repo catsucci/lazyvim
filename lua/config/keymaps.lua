@@ -133,7 +133,7 @@ end, { desc = "navigate to file 9", remap = true })
 -- ThePrimeagen replace
 keymap.set(
     "n",
-    "<leader>pr",
+    "<leader>r",
     [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
     { desc = "ThePrimeagen replace", remap = true }
 )
